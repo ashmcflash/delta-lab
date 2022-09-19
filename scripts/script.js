@@ -9,27 +9,17 @@ $(document).ready(function () {
 
     let userName = $("#userName").val();
     console.log("user name = ", userName);
-    //let coolFacts = generateCoolNameFacts(userName);
+    // let coolFacts = generateCoolNameFacts(userName);
 
     console.log("name length f/n = ", nameLength(userName));
 
     console.log("you clicked the button");
-    //console.log("from ln 12", generateCoolNameFacts(userName));
+    // console.log("from ln 12", generateCoolNameFacts(userName));
 
     $("#coolNameFactsOutput").html(nameLength(userName));
-
-    // $("#coolNameFactsOutput").html(getSpiritAnimal(userName));
-
-    // $("#coolNameFactsOutput").html(
-    //   '<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Y-YVLipceJt1DMU3Bs8uIAHaFj%26pid%3DApi&f=1">'
-    // );
-
-    // $("#coolNameImg").attr(
-    //   "src",
-    //   "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.Y-YVLipceJt1DMU3Bs8uIAHaFj%26pid%3DApi&f=1"
-    // );
   });
 });
+
 
 function generateCoolNameFacts(userName) {
   let coolFacts = "";
@@ -82,3 +72,35 @@ function getSpiritAnimal(x) {
     return "u are nothing.";
   }
 }
+
+
+$("button").click(function () {
+  
+  let userMonth = $(this).attr("value");
+
+
+  console.log(getAnimal(userMonth));
+});
+
+function getAnimal(month) {
+  
+  let animal = "nothing";
+
+  switch (month) {
+    case "JAN":
+      animal = "Golden Eagle";
+      break;
+    case "APR":
+      animal = "Cat";
+      break;
+    case "JUL":
+      animal = "Charizard";
+      break;
+    case "OCT":
+      animal = "Alpha Wolf"
+      break;
+  }
+
+  return animal;
+}
+
